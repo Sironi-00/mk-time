@@ -6,6 +6,7 @@ form {
 }
 fieldset {
     padding: 0.25rem 0.5rem;
+    background-color: var(--tertiary);
 }
 label, input {
     display: block;
@@ -22,7 +23,6 @@ input {
     display: inline;
     width: max-content;
 }
-
 #marketing label {
     margin-left: 2rem;
 }
@@ -34,4 +34,5 @@ input[type=submit] {
     margin: 0.5rem auto;
     border: 1px solid #000;
     box-shadow: 0 0 4px #000;
+    background-color: var(--tertiary);
 }

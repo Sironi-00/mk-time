@@ -5,7 +5,8 @@ main {
     padding: 0.125rem;
 }
 main * {
-    background-color: #AAA;
+    background-color: var(--tertiary);
+    color: var(--second);
     text-align: center;
     margin: 0.1rem;
 }

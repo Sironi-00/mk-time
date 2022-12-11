@@ -1,3 +1,9 @@
+:root {
+    --main: #FFF;
+    --second: #000;
+    --tertiary: #e6d656;
+    --peri: #34679E;
+}
 * {
     margin: 0;
     padding: 0;
@@ -10,8 +16,10 @@ header {
     text-align: center;
     padding: 0.25rem;
     /* background-color: #666; */
-    box-shadow: 0 0 12px #000;
-    border: 4px inset #000;
+    box-shadow: 0px 4px 12px var(--second);
+    border-bottom: 4px inset var(--second);
+    margin-bottom: 0.5rem;
+    background-color: var(--main);
 }
 header h1 {
     text-shadow: 2px 2px 2px #FFF;
@@ -39,10 +47,14 @@ nav a {
     padding: 0.5rem 1rem;
     color: #000;
     text-decoration: none;
+    background-color: var(--tertiary);
 }
 footer {
     text-align: center;
-    background-color: #DDD;
+    background-color: var(--main);
+    margin-top: 0.5rem;
+    box-shadow: 0px 4px 12px var(--second);
+    border-top: 4px inset var(--second);
 }
 footer a {
     padding: 0 0.5rem;
