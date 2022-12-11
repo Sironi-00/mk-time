@@ -1,0 +1,17 @@
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 0.125rem;
+}
+main * {
+    background-color: #AAA;
+    text-align: center;
+    margin: 0.1rem;
+}
+section {
+    width: 99%;
+}
+article {
+    width: 49%;
+}

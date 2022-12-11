@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create New Account</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="./register.css">
+</head>
+<body>
+    <header>
+        <h1>MK Time</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore quibusdam temporibus quaerat voluptatibus repellat.</p>
+        <p>mk time is a proud and reliable brand for all your clothing needs</p>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="./products/products.html">products</a></li>
+                <li><a href="#footer">Contact</a></li>
+                <li><a href="../login/login.html">sign in</a></li>
+                <li><a href="../register/register.html">sign up </a></li>    
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Create New Account</h2>
+            <p>
+                Sign Up to get the best deals and always be up to date wirh our new
+                offers!
+            </p>
+            <form action="" method="post">
+                <fieldset>
+                    <legend>Sign Up</legend>
+                    <label for="name"> Name(s): </label>
+                    <input type="text" name="name" placeholder="John Snow">
+
+                    <label for="email"> Email: </label>
+                    <input type="email" name="email" placeholder="john@snow.com" required>
+                    
+                    <label for="new-password"> New Password: </label>
+                    <input type="password" name="new-password" required>
+                    
+                    <label for="confirm-password"> Retype Password: </label>
+                    <input type="password" name="confirm-password" required>
+                    <fieldset id="marketing">
+                        <legend>Recieve emails about our Latest Mechandise</legend>
+                        <label for="marketing-yes">Yes:</label>
+                        <input type="radio" name="marketing" id="marketing-yes" checked>
+                        <label for="marketing-no">No:</label>
+                        <input type="radio" name="marketing" id="marketing--no">
+                    </fieldset>
+                </fieldset>
+                <input type="submit" value="SIGN UP">
+            </form>
+    </main>
+    <footer id="footer">
+        <h2>Get In Touch</h2>
+        <ul>
+            <li><a href="#">Call</a></li>
+            <li><a href="#">Mail</a></li>
+        </ul>
+        <p><small>mk time project &copy; 2022</small></p>
+    </footer>
+</body>
+</html>

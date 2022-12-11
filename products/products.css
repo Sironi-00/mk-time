@@ -1,0 +1,24 @@
+section {
+    text-align: center;
+}
+#item-body {
+    padding: 0.5rem 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.item-box {
+    display: block;
+    /* width: 310px;
+    height: 290px; */
+    margin: 0.25rem;
+    padding: 0.25rem;
+    border: 2px solid #000;
+    box-shadow: 0 0 8px #000;
+}
+.item-box img {
+    width: 420px;
+    height: 290px;
+    object-fit: cover;
+    display: block;
+}
