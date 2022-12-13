@@ -14,8 +14,8 @@ section {
     margin: 0.25rem;
     padding: 0.25rem;
     background-color: var(--tertiary);
-    border: 2px solid #000;
-    box-shadow: 0 0 8px #000;
+    border: 2px solid var(--second);
+    box-shadow: 0 0 8px var(--second);
     position: relative;
 }
 .item-box img {
@@ -25,35 +25,37 @@ section {
     display: block;
 }
 .item-box .item-name {
-    text-shadow: 0 0 2px #000;
+    text-shadow: 0 0 2px var(--second);
+    margin: auto;
+    width: max-content;
 }
 .item-box .item-price {
     width: max-content;
-    
+    float: left;
+    margin: 0.25rem 0;
     padding: 0.125rem 0.25rem;
-    box-shadow: inset 0 0 4px #000;
+    box-shadow: inset 0 0 4px var(--second);
+}
+.item-box .item-buy {
+    float: right;
+    margin: 0.25rem 0;
+    padding: 0.125rem 1rem;
+    border-radius: 0;
+    box-shadow: 2px 2px 4px var(--second);
 }
 .item-box summary {
     position: absolute;
-    top: 2%;
-    left: 2%;
-    width:65%;
-    height: 1.5rem;
-    background-color: #0001;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 70%;
+    background-color: #DDDa;
+    border: 1px solid var(--tertiary);
     padding: 0.125rem 0.25rem;
-    visibility: hidden;
+    display: grid;
+    place-content: center;
+    opacity: 0;
 }
-.item-box summary {
-    visibility: visible;
-}
-
-.item-purchase {
-    position: absolute;
-    bottom: 5%;
-    right: 5%;
-    display: flex;
-    background-color: #FFF6;
-}
-.item-purchase p::after {
-    content: attr(quantity);
+.item-box summary:hover {
+    opacity: 1;
 }
