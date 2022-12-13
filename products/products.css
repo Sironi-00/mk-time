@@ -49,7 +49,7 @@ section {
     left: 5%;
     width: 90%;
     height: 70%;
-    background-color: #DDDa;
+    background-color: #DDDD;
     border: 1px solid var(--tertiary);
     padding: 0.125rem 0.25rem;
     display: grid;
@@ -58,4 +58,7 @@ section {
 }
 .item-box summary:hover {
     opacity: 1;
+}
+#cart::after {
+    content: attr(cart-item);
 }

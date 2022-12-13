@@ -21,7 +21,7 @@ let data = [
     description: "idontknow lorempsoh ghgcnlgh",
   },
   {
-    name: "Something",
+    name: "Something2",
     gender: "male",
     link: "https://images.pexels.com/photos/380782/pexels-photo-380782.jpeg?auto=compress&cs=tinysrgb&w=1600",
     price: 2700,
@@ -35,7 +35,7 @@ let data = [
     description: "idontknow lorempsoh ghgcnlgh",
   },
   {
-    name: "Something",
+    name: "Something3",
     gender: "male",
     link: "https://images.pexels.com/photos/190819/pexels-photo-190819.jpeg?auto=compress&cs=tinysrgb&dpr=1",
     price: 2963,
@@ -61,9 +61,20 @@ let item_frame = ({ name, gender, link, price, description }) => {
     <h3 class="item-name">${name}</h3>
     <summary>${description}</summary>
     <p class="item-price">Price: £${price}</p>
-    <button class="item-buy">Buy</button>
+    <button id="${name}" class="item-buy">Buy Now</button>
     `;
   to_item.append(el);
+  let buy = document.getElementById(`${name}`);
+  buy.addEventListener("click", ()=> cart_purchase(name));
 };
+// Displays cart items
+let car_list = [];
+let cart_purchase = (item) => {
+    car_list.push(item);
+    let cart = document.getElementById("cart");
+    cart.setAttribute("cart-item", car_list);
+}
 
 data.map((el) => item_frame(el));
+
+

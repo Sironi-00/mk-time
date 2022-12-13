@@ -8,10 +8,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    transition: all 1.2s;
+    transition: all 0.6s;
 }
 body {
-    background-color: #EEE;
+    background-color: #EEEEDE;
 }
 header {
     text-align: center;
@@ -20,7 +20,7 @@ header {
     box-shadow: 0px 4px 12px var(--second);
     border-bottom: 4px inset var(--second);
     margin-bottom: 0.5rem;
-    background-color: var(--main);
+    background-color: var(--tertiary);
 }
 header h1 {
     text-shadow: 2px 2px 2px #FFF;
@@ -46,13 +46,19 @@ nav ul li {
 nav a {
     text-align: center;
     padding: 0.5rem 1rem;
-    color: #000;
+    color: var(--second);
+    background-color: var(--main);
     text-decoration: none;
+}
+.active-page {
+    color: var(--second);
     background-color: var(--tertiary);
+    scale: 1.2;
+    box-shadow: inset 0 0 12px 5px var(--main);
 }
 footer {
     text-align: center;
-    background-color: var(--main);
+    background-color: var(--tertiary);
     margin-top: 0.5rem;
     box-shadow: 0px 4px 12px var(--second);
     border-top: 4px inset var(--second);
@@ -62,8 +68,8 @@ footer a {
     margin: 0rem 1rem;
 }
 a:hover {
-    background-color: #000;
-    color: #FFF;
+    color: var(--tertiary);
+    background-color: var(--second);
 }
 @media screen and (min-width: 1400px) {
     body {
