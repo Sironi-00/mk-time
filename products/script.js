@@ -64,17 +64,38 @@ let item_frame = ({ name, gender, link, price, description }) => {
     <button id="${name}" class="item-buy">Buy Now</button>
     `;
   to_item.append(el);
+  // gets shop item by id => name
   let buy = document.getElementById(`${name}`);
-  buy.addEventListener("click", ()=> cart_purchase(name));
+  // adds item to cart
+  buy.addEventListener("click", ()=> cart_purchase(name, price));
 };
-// Displays cart items
-let car_list = [];
-let cart_purchase = (item) => {
-    car_list.push(item);
-    let cart = document.getElementById("cart");
-    cart.setAttribute("cart-item", car_list);
-}
-
+// Displays data from obj to html
 data.map((el) => item_frame(el));
 
+// Displays cart items
+let cart_sum = 0
+let cart_purchase = (item, price) => {
+    let cart = document.getElementById("cart-item");
+    //Display items in a cart 
+    let cart_item = document.createElement("p");
+    cart.setAttribute("class", "cart-item-name");
+    cart_item.innerHTML = `${item} ___ £${price}`;
+    cart.append(cart_item);
+    
+    // Total amount in cart
+    cart_sum += price
+    let counter = document.getElementById("cart-total");
+    counter.setAttribute("cart-sum", cart_sum)
+}
+
+// clear cart
+let cart_clear = document.getElementById("cart-clear");
+cart_clear.addEventListener("click", ()=> {
+  let cart_coll = document.getElementsByClassName("cart-item-name");
+  document.querySelectorAll(".cart-item-name").forEach((e) => e.remove());
+  // reset sum amount
+  cart_sum = 0;
+  let counter = document.getElementById("cart-total");
+  counter.setAttribute("cart-sum", cart_sum)
+})
 
