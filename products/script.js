@@ -47,7 +47,7 @@ let data = [
 let to_item = document.getElementById("item-body");
 
 // get n set gender from a select elemnt
-let selected_gender = "both";
+let selected_gender = "all";
 let get_gender = document.getElementById("gender-opt");
 let gender_filter = (to_gender)=>{
   selected_gender = to_gender;
@@ -60,7 +60,7 @@ get_gender.addEventListener("change", ()=> gender_filter(get_gender.value))
 // Display items from db
 let item_frame = ({ name, gender, link, price, description }) => {
   // filters items by gender
-  if (selected_gender != gender && selected_gender != "both") {
+  if (selected_gender != gender && selected_gender != "all") {
     return;
   }
   // creates and fill a div with preset item info
@@ -89,7 +89,7 @@ let cart_purchase = (item, price) => {
     //Display items in a cart 
     let cart_item = document.createElement("p");
     cart.setAttribute("class", "cart-item-name");
-    cart_item.innerHTML = `${item} ___ £${price}`;
+    cart_item.innerHTML = `${item} - £${price}`;
     cart.append(cart_item);
     
     // Total amount in cart
@@ -109,3 +109,6 @@ cart_clear.addEventListener("click", ()=> {
   counter.setAttribute("cart-sum", cart_sum)
 })
 
+// Cart Checkout
+let checkout = document.getElementById("cart-checkout");
+checkout.addEventListener("click", ()=> alert("Thank You for Shopping with us <3 "))
