@@ -7,6 +7,17 @@ section {
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
+#gender-selector {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0.35rem;
+    padding-bottom: 0;
+}
+#gender-selector * {
+    margin: 0 0.25rem;
+    padding: 0.125rem;
+}
 .item-box {
     display: block;
     width: 430px;
@@ -26,7 +37,7 @@ section {
 }
 .item-box .item-name {
     text-shadow: 0 0 2px var(--second);
-    margin: auto;
+    margin: 0.25rem auto 0;
     width: max-content;
 }
 .item-box .item-price {
@@ -80,10 +91,11 @@ section {
 }
 #cart-total::after {
     content: attr(cart-sum);
-    grid-template-columns: auto auto;
 }
 #cart-clear {
     position: absolute;
     top: 32px;
     right: 5px;
+    padding: 0.25rem;
+    border-radius: 2px;
 }

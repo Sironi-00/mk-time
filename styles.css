@@ -79,3 +79,15 @@ a:hover {
         margin: auto;
     }
 }
+@media screen and (max-width: 600px) {
+    nav ul{
+        width: 100%;
+        margin: 0.25rem auto;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    nav ul li {
+        width: max-content;
+        margin: 0.5rem auto;     
+    }   
+}

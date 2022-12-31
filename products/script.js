@@ -22,21 +22,21 @@ let data = [
   },
   {
     name: "Something2",
-    gender: "male",
+    gender: "female",
     link: "https://images.pexels.com/photos/380782/pexels-photo-380782.jpeg?auto=compress&cs=tinysrgb&w=1600",
     price: 2700,
     description: "idontknow lorempsoh ghgcnlgh",
   },
   {
     name: "Michael Kors",
-    gender: "male",
+    gender: "female",
     link: "https://images.pexels.com/photos/2783873/pexels-photo-2783873.jpeg?auto=compress&cs=tinysrgb&w=1600",
     price: 1245,
     description: "idontknow lorempsoh ghgcnlgh",
   },
   {
     name: "Something3",
-    gender: "male",
+    gender: "female",
     link: "https://images.pexels.com/photos/190819/pexels-photo-190819.jpeg?auto=compress&cs=tinysrgb&dpr=1",
     price: 2963,
     description: "idontknow lorempsoh ghgcnlgh",
@@ -45,12 +45,22 @@ let data = [
 
 // The article which will display and contain shop items
 let to_item = document.getElementById("item-body");
+
 // get n set gender from a select elemnt
 let selected_gender = "both";
+let get_gender = document.getElementById("gender-opt");
+let gender_filter = (to_gender)=>{
+  selected_gender = to_gender;
+  // clears all elements in the parent and re-renders items when gender changes
+  to_item.innerHTML = "";
+  data.map((el) => item_frame(el));
+}
+get_gender.addEventListener("change", ()=> gender_filter(get_gender.value))
+
+// Display items from db
 let item_frame = ({ name, gender, link, price, description }) => {
-  // Display items based on gender
+  // filters items by gender
   if (selected_gender != gender && selected_gender != "both") {
-    to_item.innerHTML = "No items";
     return;
   }
   // creates and fill a div with preset item info
@@ -91,8 +101,8 @@ let cart_purchase = (item, price) => {
 // clear cart
 let cart_clear = document.getElementById("cart-clear");
 cart_clear.addEventListener("click", ()=> {
-  let cart_coll = document.getElementsByClassName("cart-item-name");
-  document.querySelectorAll(".cart-item-name").forEach((e) => e.remove());
+  let cart = document.getElementById("cart-item");
+  cart.innerHTML = "";
   // reset sum amount
   cart_sum = 0;
   let counter = document.getElementById("cart-total");
