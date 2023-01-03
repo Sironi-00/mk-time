@@ -16,3 +16,8 @@ section {
 article {
     width: 49%;
 }
+@media screen and (max-width: 450px) {
+    article {
+        width: 100%;
+    }   
+}
