@@ -37,6 +37,7 @@ section {
 .item-box img {
     width: 420px;
     height: 290px;
+    background: linear-gradient(45deg, var(--main), var(--second), var(--tertiary ));
     object-fit: cover;
     object-position: 50%;
     display: block;
@@ -79,17 +80,16 @@ section {
     opacity: 1;
 }
 .cart {
-    position: fixed;
+    position: absolute;
     width: 140px;
     height: 38px;
     padding: 6px;
-    top: 45%;
+    top: 75%;
     right: 2.5%;
     background-color: var(--main);
     border: 2px solid var(--main);
     border-radius: 2px;
     box-shadow: inset 0 0 20px var(--tertiary);
-    opacity: 0.9;
     overflow: hidden;
 }
 .cart:hover {
