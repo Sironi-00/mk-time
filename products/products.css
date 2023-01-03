@@ -40,6 +40,7 @@ section {
     object-fit: cover;
     object-position: 50%;
     display: block;
+    box-shadow: 0 0 6px var(--main);
 }
 .item-box .item-name {
     text-shadow: 0 0 2px var(--second);
