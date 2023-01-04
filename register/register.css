@@ -26,8 +26,6 @@ input {
 #marketing label {
     margin-left: 2rem;
 }
-
-
 input[type=submit] {
     width: max-content;
     padding: 0.25rem 7rem;
@@ -35,4 +33,16 @@ input[type=submit] {
     border: 1px solid #000;
     box-shadow: 0 0 4px #000;
     background-color: var(--tertiary);
+}
+@media screen and (max-width: 450px) {
+    main {
+        padding: 1rem 2%;
+    }
+    fieldset {
+        padding: 2% 5%;
+    }
+    input {
+        width:  100%;
+        margin: auto;
+    }
 }
