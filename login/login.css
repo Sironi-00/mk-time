@@ -32,7 +32,7 @@ input[type=submit] {
 }
 @media screen and (max-width: 450px) {
     main {
-        padding: 1rem 2%;
+        padding: 1rem 10%;
     }
     fieldset {
         padding: 2% 5%;
