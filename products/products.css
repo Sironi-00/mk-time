@@ -80,17 +80,18 @@ section {
     opacity: 1;
 }
 .cart {
-    position: absolute;
+    position: fixed;
     width: 140px;
     height: 38px;
     padding: 6px;
-    top: 75%;
+    bottom: 45vh;
     right: 2.5%;
     background-color: var(--main);
     border: 2px solid var(--main);
     border-radius: 2px;
     box-shadow: inset 0 0 20px var(--tertiary);
     overflow: hidden;
+    z-index: 999;
 }
 .cart:hover {
     min-width: 250px;
@@ -123,6 +124,9 @@ section {
     box-shadow: 2px 2px 4px var(--second);
 }
 @media screen and (max-width: 450px) {
+    #item-body {
+        padding: 0.5rem 0;
+    }
     .item-box {
         width: 100%;
     }
