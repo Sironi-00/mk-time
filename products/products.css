@@ -84,8 +84,9 @@ section {
     width: 140px;
     height: 38px;
     padding: 6px;
-    bottom: 45vh;
-    right: 2.5%;
+    bottom: 10%;
+    /* 100vw - 1400px = X / 2 */
+    right: calc((100vw - 1400px)/2);
     background-color: var(--main);
     border: 2px solid var(--main);
     border-radius: 2px;
@@ -139,8 +140,6 @@ section {
         /* height: 80%; */
     }
     .cart {
-        position: fixed;
-        top: 2.5%;
         right: 0.5%;
         opacity: 1  ;
     }
